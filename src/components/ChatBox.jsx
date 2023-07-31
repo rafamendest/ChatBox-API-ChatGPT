@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Client } from "../services/apis.js";
+import { ChatGPT } from "../services/apis.js";
 
 const ChatBox = () => {
   const [data, setData] = useState('');
@@ -21,11 +21,8 @@ const ChatBox = () => {
       };
 
       try {
-        await Client.post("https://api.openai.com/v1/completions", params)
-        .then((result) => {
-          setData(result.data.choices[0].text);
-        })
-        .catch((err) => console.log(err));
+        const response = await ChatGPT.post("https://api.openai.com/v1/completions", params);
+        setData(response.data.choices[0].text);
       } catch (err) {
         console.error(err);
       } finally {
@@ -43,7 +40,7 @@ const ChatBox = () => {
       <textarea
         className="text-box"
         id="text-box"
-        placeholder="Escreva alguma coisa"
+        placeholder="Escreva alguma coisa..."
         onKeyDown={(e) => handleSubmitQuestion(e)}
       />
     </>
