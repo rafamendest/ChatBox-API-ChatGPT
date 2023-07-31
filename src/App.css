@@ -7,7 +7,7 @@ textarea {
     width: 80%;
     resize: none;
 
-    background-color: #999999;
+    background-color: #727272;
 
     color: white;
     font-size: 2rem;
@@ -15,7 +15,7 @@ textarea {
 
 .App {
     height: 100vh;
-    background-color: #333333;
+    background-color: #ffffff;
 }
 
 .answer-box {
