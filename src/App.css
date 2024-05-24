@@ -6,16 +6,18 @@
 textarea {
     width: 80%;
     resize: none;
+    font-size: 2.5rem;
 
-    background-color: #3b3b3b;
+    background-color: #d3d3d3;
 
-    color: white;
-    font-size: 2rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .App {
     height: 100vh;
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 .answer-box {
@@ -24,6 +26,5 @@ textarea {
 }
 
 .text-box {
-    height: 20%;
-    margin: 0% 10%;
+    height: 250px;
 }
